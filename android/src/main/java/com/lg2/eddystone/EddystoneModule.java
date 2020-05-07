@@ -231,6 +231,7 @@ public class EddystoneModule extends ReactContextBaseJavaModule {
         params.putString("uid", result.getDevice().getAddress());
         params.putInt("txPower", serviceData[1]);
         params.putInt("rssi", result.getRssi());
+        params.putString("byte", "["+serviceData[14]+","+serviceData[15]+","+serviceData[16]+","+serviceData[17]+"]");
 
         // dispatch event
         emit(event, params);
